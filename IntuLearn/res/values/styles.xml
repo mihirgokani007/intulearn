@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- *** APP THEME *** -->
+
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light"> <!-- .DarkActionBar -->
+        <!--
+        Base application theme, dependent on API level. Replace this with
+        AppBaseTheme from res/values-vXX/styles.xml for other API levels.
+        Should not be used directly. For direct use, see AppTheme.
+        -->
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!--
+        Application theme. All customizations that are NOT specific 
+        to a particular API-level can go here.
+        -->
+        <item name="android:actionBarTabBarStyle">@style/TabDividerStyle</item>
+    </style>
+
+    <!-- *** OTHER THEMES *** -->
+
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="SplashTheme" parent="FullscreenTheme">
+        <item name="android:windowBackground">@android:color/holo_blue_dark</item>
+        <item name="android:buttonStyle">@style/TransparentButtonStyle</item>
+        <item name="android:textViewStyle">@style/LogoTextViewStyle</item>
+    </style>
+
+    <!-- *** FORCE SHOW MENU ICONS *** -->
+
+
+    <!-- *** INDIVIDUAL STYLES *** -->
+
+    <style name="LogoTextViewStyle" parent="@style/TextAppearance.Huge.BoldItalic">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">70sp</item>
+    </style>
+
+    <style name="TabDividerStyle" parent="@android:style/Widget.Holo.ActionBar.TabBar">
+        <item name="android:divider">@drawable/tabseparator</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:dividerPadding">0dip</item>
+    </style>
+
+    <style name="TransparentButtonStyle">
+        <item name="android:background">@color/white_transparent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="OverlayStyle">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="OverlayStyle.White">
+        <item name="android:background">@color/white_overlay</item>
+    </style>
+
+    <style name="ChronometerStyle">
+        <item name="android:textViewStyle">@style/TextAppearance.Huge</item>
+    </style>
+
+    <!-- ** ALL TEXT APPERENCES ** -->
+
+    <style name="TextAppearance.Large" parent="@android:style/TextAppearance">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="TextAppearance.Large.Bold" parent="@style/TextAppearance.Large">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Large.BoldItalic" parent="@style/TextAppearance.Large">
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+    <style name="TextAppearance.ExtraLarge" parent="@android:style/TextAppearance">
+        <item name="android:textSize">50sp</item>
+    </style>
+
+    <style name="TextAppearance.ExtraLarge.Bold" parent="@style/TextAppearance.ExtraLarge">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.ExtraLarge.BoldItalic" parent="@style/TextAppearance.ExtraLarge">
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+    <style name="TextAppearance.Huge" parent="@android:style/TextAppearance">
+        <item name="android:textSize">70sp</item>
+    </style>
+
+    <style name="TextAppearance.Huge.Bold" parent="@style/TextAppearance.Huge">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Huge.BoldItalic" parent="@style/TextAppearance.Huge">
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+</resources>

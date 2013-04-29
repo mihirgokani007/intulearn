@@ -1,0 +1,71 @@
+<article id="main">
+    <section id="intro">
+        <p>
+        <strong>Selection sort</strong> is a sorting algorithm, 
+        specifically an in-place comparison sort. It has O(n^2) 
+        time complexity, making it inefficient on large lists.
+        The algorithm divides the input list into two parts:
+        <ul> 
+        <li>the sublist of items already sorted, which is built up 
+        from left to right at the front (left) of the list, and</li> 
+        <li>the sublist of items remaining to be sorted that occupy the rest of the list</li>
+        </ul>
+        Initially, the sorted sublist is empty and the unsorted 
+        sublist is the entire input list. The algorithm proceeds 
+        by finding the smallest (or largest, depending on sorting 
+        order) element in the unsorted sublist, exchanging it with 
+        the leftmost unsorted element (putting it in sorted order), 
+        and moving the sublist boundaries one element to the right.
+        </p>
+    </section>
+    
+    <section id="performance">
+        <p>
+        Selection sort is not difficult to analyze compared to 
+        other sorting algorithms since none of the loops depend 
+        on the data in the array. Selecting the lowest element 
+        requires scanning all n elements (this takes n ? 1 comparisons) 
+        and then swapping it into the first position. Finding the 
+        next lowest element requires scanning the remaining n ? 1 
+        elements and so on, for (n ? 1) + (n ? 2) + ... + 2 + 1 = 
+        n(n ? 1) / 2 ? ?(n2) comparisons (see arithmetic progression). 
+        Each of these scans requires one swap for n ? 1 elements (the 
+        final element is already in place).
+        </p>
+    </section>
+    
+    <section id="algorithm">
+        <p class="prettyprint">
+        Pseudocode for Selection Sort:</br>
+		bingo(array A)
+		{ This procedure sorts in ascending order. }
+		begin
+		&nbsp&nbsp    max := length(A)-1
+		&nbsp&nbsp&nbsp&nbsp        nextValue := A[max];
+		&nbsp&nbsp    for i := max - 1 downto 0 do
+		&nbsp&nbsp&nbsp&nbsp        if A[i] > nextValue then
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            nextValue := A[i];
+		&nbsp&nbsp    while (max > 0) and (A[max] = nextValue) do
+		&nbsp&nbsp&nbsp&nbsp        max := max - 1;
+		 
+		&nbsp&nbsp    while max > 0 do begin
+		&nbsp&nbsp&nbsp&nbsp        value := nextValue;
+		&nbsp&nbsp&nbsp&nbsp        nextValue := A[max];
+		&nbsp&nbsp&nbsp&nbsp        for i := max - 1 downto 0 do
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp             if A[i] = value then begin
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                 swap(A[i], A[max]);
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                max := max - 1;
+		&nbsp&nbsp&nbsp&nbsp            end else if A[i] > nextValue then
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                 nextValue := A[i];
+		&nbsp&nbsp&nbsp&nbsp&nbsp        while (max > 0) and (A[max] = nextValue) do
+		&nbsp&nbsp&nbsp&nbsp           max := max - 1;
+		&nbsp&nbsp   end;
+        end;</p>
+    </section>
+    
+    <section id="references">
+        <p>
+            Wikipedia: <a href="http://en.wikipedia.org/wiki/Bubble_sort"></a>
+        </p>
+    </section>
+</article>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Common -->
+    <string name="app_name">IntuLearn</string>
+
+    <!-- Menu -->
+    <string name="menu_share">Share</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_about">About</string>
+    <string name="menu_user_guide">User Guide</string>
+
+    <!-- Errors -->
+    <string name="error_content_unavailable">Sorry! The requested content is not available!</string>
+
+    <!-- Splash -->
+    <string name="title_activity_splash">Splash Screen</string>
+    <string name="splash_help_button">Help</string>
+    <string name="splash_next_button">Start!</string>
+
+    <!-- Main -->
+    <string name="title_activity_main">Main Screen</string>
+
+    <!-- Details -->
+    <string name="title_activity_details">Details Screen</string>
+    <string name="title_fragment_description">Description</string>
+    <string name="title_fragment_evaluate">Evaluate</string>
+    <string name="title_fragment_experiment">Experimant!</string>
+
+    <!-- Media and Navigation -->
+    <string name="str_start">Start</string>
+    <string name="str_stop">Stop</string>
+    <string name="str_play">Play</string>
+    <string name="str_pause">Pause</string>
+    <string name="str_resume">Resume</string>
+    <string name="str_next">Next</string>
+    <string name="str_previous">Previous</string>
+
+    <!-- Labels -->
+    <string name="str_label_share_title">Share IntuLearn via...</string>
+    <string name="str_label_share_body">I\'m using IntuLearn, an Android app to learn various concepts by examples. http://bit.ly/intulearn Check it out!</string>
+    <string name="str_label_loading">Loading...</string>
+    <string name="str_label_skill_level">Skill Level</string>
+    <string name="str_label_category">Category</string>
+    <string name="str_label_author">Author</string>
+    <string name="str_label_keywords">Keywords</string>
+
+    <!-- User Guide and About -->
+    <string name="title_activity_user_guide">User Guide</string>
+    <string name="title_activity_about">About</string>
+    <string name="str_about_text1">Entirely designed and developed by a team of young, highly-motivated engineers, consisting of a trio:\n<b>Mihir Gokani\nPushpak Burange\nSnehalesh Mahale</b></string>
+    <string name="str_about_text2">This project is developed as a part of\n<b>Studio Design Project (II)</b>\nunder the guidance of Prof. Phani Tetali.</string>
+    <string name="str_about_text3">To be submitted for\n<b>Akash Android Programming Competition 2013</b>.</string>
+
+</resources>

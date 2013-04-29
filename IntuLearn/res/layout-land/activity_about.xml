@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@android:id/icon1"
+            android:layout_width="match_parent"
+            android:layout_height="100dip"
+            android:contentDescription="@string/title_activity_about"
+            android:padding="25dip"
+            android:src="@drawable/ic_about" />
+
+        <TextView
+            android:id="@android:id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="@string/str_about_text1"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dip"
+        android:layout_height="match_parent"
+        android:layout_margin="10dip"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@android:id/icon2"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:contentDescription="@string/title_activity_about"
+            android:padding="10dip"
+            android:src="@drawable/ic_about" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="@string/str_about_text2"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@android:id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="@string/str_about_text3"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+</LinearLayout>

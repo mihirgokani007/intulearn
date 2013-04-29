@@ -1,0 +1,5 @@
+section#intro, section#performance, section#properties, section#algorithm, section#references {
+    padding-top: 0.25em;
+    margin-bottom: 0.5em;
+    border-bottom: solid 1px gray;
+}

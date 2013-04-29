@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:padding="10dip" >
+
+    <ImageView
+        android:id="@android:id/icon"
+        android:layout_width="?android:attr/listPreferredItemHeightSmall"
+        android:layout_height="?android:attr/listPreferredItemHeightSmall"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/str_label_skill_level"
+        android:padding="5dp"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@android:id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@android:id/icon"
+        android:textAppearance="?android:attr/textAppearanceListItem"
+        android:textColor="@android:color/primary_text_light_nodisable" />
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="6dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@android:id/title"
+        android:text="@string/str_label_author"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textColor="@android:color/secondary_text_light_nodisable"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@android:id/title"
+        android:layout_toLeftOf="@android:id/icon"
+        android:layout_toRightOf="@android:id/empty"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textColor="@android:color/secondary_text_light_nodisable" />
+
+</RelativeLayout>

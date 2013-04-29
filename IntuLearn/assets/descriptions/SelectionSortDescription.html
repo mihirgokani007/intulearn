@@ -1,0 +1,70 @@
+<article id="main">
+    <section id="intro">
+        <p>
+        <strong>Selection sort</strong> is an in-place comparison sort. 
+        It has O(n^2) time complexity, making it inefficient on large lists,
+        and generally performs worse than the similar insertion sort.
+        However, selection sort is noted for its simplicity.
+        </p>
+        <p>
+        The working of selection sort somewhat resembles insertion sort. An input array is 
+        imaginary divided into two parts - sorted one and unsorted one. At the beginning, 
+        sorted part is empty and unsorted one contains the whole array. At every step, 
+        it finds the minimum (or maximum, depending on sorting order) element in the unsorted part and appends
+        it to the end of the sorted one. When unsorted part becomes empty, algorithm stops.
+        </p>
+    </section>
+    
+    <section id="performance">
+        <p>
+        Selection sort stops, when unsorted part becomes empty. As we know, on every step number of 
+        unsorted elements decreased by one. Therefore, selection sort makes n steps (n is number of elements in array), before stop. 
+        Also, every step requires finding minimum in unsorted part. Summing up, n + (n - 1) + (n - 2) + ... + 1, results in O(n^2) 
+        number of comparisons, in any case. Number of swaps may vary from zero (in case of sorted array) to 
+        n - 1 (in case array was sorted in reversed order), which results in O(n) number of swaps. 
+        So, the overall algorithm complexity is O(n^2).
+        </p>
+    </section>
+    
+    <section id="properties">
+        <p>
+        <ul>
+        <li><b>Quadratic</b>: On average O(n^2) comparisons, but only O(n) swaps</li> 
+        <li><b>Non Adaptive</b>: Its performance is not affected by the initial order of elements. So it takes O(n^2) time even if elements are already sorted.</li> 
+        <li><b>Not Stable</b>: It does not retain relative order of the same elements</li>
+        <li><b>In-place</b>: It requires constant (i.e. O(1)) additional space</li>
+        </ol>
+        </p>
+    </section>
+    
+    <section id="algorithm">
+        <pre class="prettyprint">
+void selectionSort(int input[], int length) {
+    int i, j;
+    int min, temp;
+	for (i = 0; i < length-1; i++) {
+	    min = i;
+	    for (j = i+1; j < length; j++) {
+	        if (input[j] < input[min])
+	            min = j;
+	    }
+	    temp = input[i];
+	    input[i] = input[min];
+	    input[min] = temp;
+	}
+}
+        </pre>
+    </section>
+    
+    <section id="references">
+        <p>
+        <ul>
+        <li><a href="http://en.wikipedia.org/wiki/Selection_sort">Wikipedia</a></li>
+        <li><a href="http://courses.cs.vt.edu/~csonline/Algorithms/Lessons/SelectionSort/index.html">Virgina Tech CS Online Modules</a></li>
+        <li><a href="http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Sorting/selectionSort.htm">Kent State University</a></li>
+        <li><a href="http://www.algolist.net/Algorithms/Sorting/Selection_sort">Algorithms and Data Structures with implementations in Java and C++</a></li>
+        <li><a href="http://www.sorting-algorithms.com/selection-sort">Sorting Algorithm Animations</a></li>
+        </ul>
+        </p>
+    </section>
+</article>
