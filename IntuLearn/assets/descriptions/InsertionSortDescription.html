@@ -1,0 +1,74 @@
+<article id="main">
+    <section id="intro">
+        <p>
+        If we have some already sorted elements, a new unsorted element 
+        can be inserted in the sorted set in proper place, making it a 
+        part of sorted set, which is the main idea behind <strong>Insertion Sort</strong>. 
+        It is the simple example of the <u>incremental insertion technique</u>, 
+        where we build up a complicated structure on n items by first building 
+        it on n - 1 items and then making the necessary changes to fix things 
+        by adding a new item. 
+        </p>
+        <p>
+        Insertion sort algorithm somewhat resembles selection sort. An input array is 
+        imaginary divided into two parts - sorted one and unsorted one. At the beginning, 
+        sorted part contains the first element of the array and unsorted one contains the rest. 
+        At every step, algorithm takes first element in the unsorted part and inserts 
+        it to the right place of the sorted one. When unsorted part becomes empty, algorithm stops.
+        </p>
+    </section>
+    
+    <section id="performance">
+        <p>
+        The best case input is the input array that is already sorted. 
+        In each iteration, the first element of the unsorted section 
+        is only compared with the right-most element of the sorted section.
+        Hence, in this case it has a linear running time (i.e., O(n)). 
+        The worst case is when the input array is already sorted in reverse order.
+        Here, in each iteration, each element of the unsorted section 
+        needs to be compared and shifted with all elements of sorted section. 
+        This gives insertion sort a quadratic running time (i.e., O(n^2)). 
+        The average case for this algorithm is also quadratic.
+        </p>
+    </section>
+    
+    <section id="properties">
+        <p>
+        <ul>
+        <li><b>Quadratic</b>: On average O(n^2) comparisons and swaps</li> 
+        <li><b>Adaptive</b>: Its performance adapts to the initial order of elements. So it takes only O(n) time when elements are already sorted.</li> 
+        <li><b>Stable</b>: It retains relative order of the same elements</li>
+        <li><b>In-place</b>: It requires constant (i.e. O(1)) additional space</li>
+        <li><b>Online</b>: New elements can be added during the sort</li>
+        </ol>
+        </p>
+    </section>
+    
+    <section id="algorithm">
+        <pre class="prettyprint">
+void insertionSort(int input[], int length) {
+  int i, j;
+  for (i = 1; i < length; i++) {
+    int elementToInsert = input[i]; 
+    for (j = i; j > 0 && elementToInsert < input[j-1]; j--) {
+      input[j] = input[j-1];
+    }
+    input[j] = elementToInsert; 
+  }
+}
+        </pre>
+    </section>
+    
+    <section id="references">
+        <p>
+        <ul>
+        <li><a href="http://en.wikipedia.org/wiki/Insertion_sort">Wikipedia</a></li>
+        <li><a href="http://www.princeton.edu/~achaney/tmve/wiki100k/docs/Insertion_sort.html">Allison Chaney, Princeton University</a></li>
+        <li><a href="http://courses.cs.vt.edu/~csonline/Algorithms/Lessons/InsertionSort/index.html">Virgina Tech CS Online Modules</a></li>
+        <li><a href="http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Sorting/insertionSort.htm">Kent State University</a></li>
+        <li><a href="http://www.algolist.net/Algorithms/Sorting/Insertion_sort">Algorithms and Data Structures with implementations in Java and C++</a></li>
+        <li><a href="http://www.sorting-algorithms.com/insertion-sort">Sorting Algorithm Animations</a></li>
+        </ul>
+        </p>
+    </section>
+</article>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.ac.iitb.intulearn"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- Splash Screen -->
+        <activity
+            android:name="in.ac.iitb.intulearn.SplashActivity"
+            android:label="@string/title_activity_splash"
+            android:theme="@style/SplashTheme" >
+            <intent-filter android:label="@string/app_name" >
+                <!-- REF: http://stackoverflow.com/a/7250902/155813 -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main Screen To Show Searchable List -->
+        <activity
+            android:name="in.ac.iitb.intulearn.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+
+        <!-- Details Screen To Show Details About Selected Item -->
+        <activity
+            android:name="in.ac.iitb.intulearn.DetailsActivity"
+            android:label="@string/title_activity_details"
+            android:parentActivityName="in.ac.iitb.intulearn.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.ac.iitb.intulearn.MainActivity" />
+        </activity>
+
+        <!-- Generic Activity -->
+        <activity
+            android:name="in.ac.iitb.intulearn.GenericActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="in.ac.iitb.intulearn.MainActivity" >
+        </activity>
+    </application>
+
+</manifest>

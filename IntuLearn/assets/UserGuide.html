@@ -1,0 +1,111 @@
+<html>
+
+    <head>
+        <title>User Guide</title>        
+        <style type="text/css">
+            * {
+                line-height: 1.5em;
+            }
+            #table-skill-levels {
+                width: 80%;
+                margin: 2% 10% 5%;
+                border-collapse: collapse;
+            }
+            #table-skill-levels th, #table-skill-levels td {
+                text-align: center;
+                border: solid 1px darkgray;
+                height: 2em;
+            }
+            #table-skill-levels img {
+                height: 1.5em;
+            }
+            h3 {
+                padding-top: 1em;
+            }
+            hr {
+                width: 80%;
+                height: 1px;
+                color: darkgray;
+                background-color: darkgray;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <ul>
+                <li><a href="#app-structure">The App Structure</a></li>
+                <li><a href="#unit-details">Unit Details</a>
+                    <ol type="A">
+                        <li><a href="#unit-details-1">Description</a></li>
+                        <li><a href="#unit-details-2">Experiment</a></li>
+                        <li><a href="#unit-details-3">Evaluate</a></li>
+                    </ol>
+                </li>
+                <li><a href="#note">Note</a></li>
+            </ul>
+        </header>
+        
+        <hr />
+        
+        <section>
+		    <a name="app-structure"><h3>The App Structure</h3></a>
+		    The very first screen is the splash screen which shows logo of this app.
+		    The next screen is the main screen which enlists all available units 
+		    along with the author name and a skill level icon to learn that unit.
+		    You can easily filter the units by name, category, and author name 
+		    using the search button. Following list shows all possible skill levels:
+		    <table id="table-skill-levels">
+	        <tr><td><img src="file:///android_res/drawable/ic_atom_1.png" alt="Basic" /></td><td>Basic Skills</td></tr>
+	        <tr><td><img src="file:///android_res/drawable/ic_atom_2.png" alt="Moderate" /></td><td>Moderate Skills</td></tr>
+	        <tr><td><img src="file:///android_res/drawable/ic_atom_3.png" alt="Advanced" /></td><td>Advanced Skills</td></tr>
+		    </table>
+	    </section>
+
+        <section>
+		    <a name="unit-details"><h3>The Unit Details</h3></a>
+            Each unit is divided in 3 sections, namely, <b>Description</b>, 
+            <b>Experiment</b> an <b>Evaluate</b>. In order to move 
+            between sections, select the appropreate tab at the top 
+            of the screen or simply touch the screen with your finger 
+            and slide it sideways for the next tab to appear.
+		    
+		    <ul>
+		    <li><a name="unit-details-1"><b>Description:</b></a> 
+		        This tab contains a brief description of the 
+		        algorithm. It also contains some good references 
+		        that you must follow to get reasonable knowledge 
+		        for the perticular topic. After all, self-learning 
+		        is the motto of this app!</li>
+		    <li><a name="unit-details-2"><b>Experiment:</b></a> 
+		        In this tab you can try out some animated examples. 
+		        The animation starts after touching the play botton 
+		        on the bottom right corner of the screen. It can be 
+		        paused or replayed using the same button. In order 
+		        to modify the input to the algorithm, simply long 
+		        press on the input elements and a dialog box will 
+		        appear to take your input. Note that you can only 
+		        modify input when the animation is not running.</li>
+		    <li><a name="unit-details-3"><b>Evaluate:</b></a> 
+		        This section contains a set of contains multiple 
+		        choice questions to test your learning and skills.
+		        Your time to complete the quiz will be shown to you
+		        when you press the Stop button. You can also pause 
+		        the quiz by pressing Pause button. The correct 
+		        answers with explanation is put on our website.
+		        But, we highly recommend you to first try to attempt 
+		        entire quiz yourself, there's no harm if you get 
+		        couple of answers wrong!</li>
+		    </ul>
+	    </section>
+	    
+        <section>
+            <a name="note"><h3>Note</h3></a>
+            This app is an open-source project released under GNU-GPLv3.
+            So feel free to share this app with your friends. 
+            We also encourage you to download the source of this app and 
+            contribute learning material to this project. Have fun!
+        </section>
+    </body>    
+    
+</html>

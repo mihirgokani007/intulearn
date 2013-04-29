@@ -1,0 +1,61 @@
+<article id="main">
+    <section id="intro">
+        <p>
+        <strong>Binary search</strong> . 
+        </p>
+    </section>
+    
+    <section id="performance">
+        <p>
+        Every iteration eliminates half of the remaining possibilities. 
+        This makes binary searches very efficient - even for large collections. 
+        Binary search requires a sorted collection. This means the collection 
+        must either be sorted before searching, or inserts/updates must be smart. 
+        Also, binary searching can only be applied to a collection that allows 
+        random access (indexing).
+        </p>
+    </section>
+    
+    <section id="properties">
+        <p></p>
+    </section>
+    
+    <section id="algorithm">
+        <pre class="prettyprint">
+            <code class="language-java">
+int binarySearch(int input[], 
+                 int length, 
+                 int searchValue) {
+
+  int low = 0;
+  int high = length-1,
+  int mid;
+
+  while(low <= high) {
+    mid = (low + high) / 2;
+
+    if (searchValue == input[mid]) {
+      return mid;
+    } else if (searchValue > input[mid]) {
+      low = mid + 1;
+    } else {
+      high = mid - 1;
+    }
+  }
+
+  return -1; // Value NOT Found!
+}
+            </code>
+        </pre>
+    </section>
+    
+    <section id="references">
+        <p>
+        <ul>
+        <li><a href="http://en.wikipedia.org/wiki/Binary_search">Wikipedia</a></li>
+        <li><a href="http://algorithms.openmymind.net/search/binarysearch.html">Simple Algorithms</a></li>
+        <li><a href="http://stackoverflow.com/q/700241/155813">StackOverflow Discussion</a></li>
+        </ul>
+        </p>
+    </section>
+</article>

@@ -1,0 +1,51 @@
+<article id="main">
+    <section id="intro">
+        <p>
+        <strong>Linear search</strong> or <strong>sequential 
+        search</strong> is a method for finding 
+        a particular value in a list, that consists of <u>checking 
+        every one of its elements, one at a time and in sequence, 
+        until the desired one is found</u>. Linear search is the simplest 
+        search algorithm; it is a special case of brute-force search. 
+        </p>
+    </section>
+    
+    <section id="performance">
+        <p>
+        For a list with n items, the best case is when the value is 
+        equal to the first element of the list, in which case only 
+        one comparison is needed. The worst case is when the value 
+        is not in the list (or occurs only once at the end of the 
+        list), in which case n comparisons are needed.
+        Its worst case cost is proportional to the number of elements 
+        in the list; and so is its expected cost, if all list elements 
+        are equally likely to be searched for.
+        </p>
+    </section>
+    
+    <section id="algorithm">
+        <pre class="prettyprint">
+int linearSearch(int input[], 
+                 int length, 
+                 int searchValue) {
+  int i;
+  for(i = 0; i < length; i++) {
+    if (input[i] == searchValue) { 
+      return i; 
+    }
+  }
+  return -1; // Value NOT Found!
+}
+        </pre>
+    </section>
+    
+    <section id="references">
+        <p>
+        <ul>
+        <li><a href="http://en.wikipedia.org/wiki/Linear_search">Wikipedia</a></li>
+        <li><a href="http://algorithms.openmymind.net/search/linear.html">Simple Algorithms</a></li>
+        <li><a href="http://stackoverflow.com/q/700241/155813">StackOverflow Discussion</a></li>
+        </ul>
+        </p>
+    </section>
+</article>
