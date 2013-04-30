@@ -48,8 +48,8 @@ import android.view.animation.LinearInterpolator;
 
 public class BinarySearchExperiment extends ExperimentView {
 
-    final static private long ELEMENT_ANIMATION_DURATION_MOVE = 1000; // Animate
-    final static private long ELEMENT_ANIMATION_DURATION_MATCH = 2000; // Match
+    final static private int ELEMENT_ANIMATION_REL_LENGTH_MOVE = 1; // Animate
+    final static private int ELEMENT_ANIMATION_REL_LENGTH_MATCH = 2; // Match
 
     private static final int ELEMENT_FILL_COLOR_FOUND = 0xff88ff88;
     private static final int ELEMENT_FILL_COLOR_NOT_FOUND = 0xffff8888;
@@ -191,7 +191,7 @@ public class BinarySearchExperiment extends ExperimentView {
 
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(a1, a2, a3);
-        animatorSet.setDuration(Math.abs(num) * ELEMENT_ANIMATION_DURATION_MOVE);
+        animatorSet.setDuration(Math.abs(num) * getAnimationDurationBase(ELEMENT_ANIMATION_REL_LENGTH_MOVE));
         animatorSet.setInterpolator(linearInterpolator);
         return animatorSet;
     }
@@ -210,7 +210,7 @@ public class BinarySearchExperiment extends ExperimentView {
 
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(a1, a2);
-        animatorSet.setDuration(ELEMENT_ANIMATION_DURATION_MATCH);
+        animatorSet.setDuration(getAnimationDurationBase(ELEMENT_ANIMATION_REL_LENGTH_MATCH));
         animatorSet.setInterpolator(linearInterpolator);
         return animatorSet;
     }
@@ -230,7 +230,7 @@ public class BinarySearchExperiment extends ExperimentView {
 
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.play(a1).with(a2).before(a3);
-        animatorSet.setDuration(ELEMENT_ANIMATION_DURATION_MATCH);
+        animatorSet.setDuration(getAnimationDurationBase(ELEMENT_ANIMATION_REL_LENGTH_MATCH));
         animatorSet.setInterpolator(linearInterpolator);
         return animatorSet;
     }

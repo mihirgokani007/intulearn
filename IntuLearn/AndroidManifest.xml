@@ -20,8 +20,10 @@
             android:label="@string/title_activity_splash"
             android:theme="@style/SplashTheme" >
             <intent-filter android:label="@string/app_name" >
+
                 <!-- REF: http://stackoverflow.com/a/7250902/155813 -->
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -42,12 +44,23 @@
                 android:value="in.ac.iitb.intulearn.MainActivity" />
         </activity>
 
+        <!-- Settings Screen -->
+        <activity
+            android:name="in.ac.iitb.intulearn.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="in.ac.iitb.intulearn.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.ac.iitb.intulearn.MainActivity" />
+        </activity>
+        
         <!-- Generic Activity -->
         <activity
             android:name="in.ac.iitb.intulearn.GenericActivity"
             android:label="@string/app_name"
             android:parentActivityName="in.ac.iitb.intulearn.MainActivity" >
         </activity>
+
     </application>
 
 </manifest>

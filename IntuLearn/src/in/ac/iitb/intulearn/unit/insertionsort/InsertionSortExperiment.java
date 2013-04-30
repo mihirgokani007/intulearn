@@ -23,8 +23,8 @@ import android.view.animation.LinearInterpolator;
  */
 public class InsertionSortExperiment extends ExperimentView {
 
-    final static private long ELEMENT_ANIMATION_DURATION_SEL = 1000; // Animate
-    final static private long ELEMENT_ANIMATION_DURATION_SLIDE = 1000; // Halt
+    final static private int ELEMENT_ANIMATION_REL_LENGTH_SEL = 1; // Animate
+    final static private int ELEMENT_ANIMATION_REL_LENGTH_SLIDE = 1; // Halt
 
     final static private TimeInterpolator linearInterpolator = new LinearInterpolator();
     final static private ArgbEvaluator argbEvaluator = new ArgbEvaluator();
@@ -105,7 +105,7 @@ public class InsertionSortExperiment extends ExperimentView {
 
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playSequentially(a1, a2);
-        animatorSet.setDuration(ELEMENT_ANIMATION_DURATION_SEL);
+        animatorSet.setDuration(getAnimationDurationBase(ELEMENT_ANIMATION_REL_LENGTH_SEL));
         animatorSet.setInterpolator(linearInterpolator);
         return animatorSet;
     }
@@ -125,7 +125,7 @@ public class InsertionSortExperiment extends ExperimentView {
 
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(a1, a2);
-        animatorSet.setDuration(ELEMENT_ANIMATION_DURATION_SLIDE);
+        animatorSet.setDuration(getAnimationDurationBase(ELEMENT_ANIMATION_REL_LENGTH_SLIDE));
         animatorSet.setInterpolator(linearInterpolator);
         return animatorSet;
     }
@@ -140,7 +140,7 @@ public class InsertionSortExperiment extends ExperimentView {
 
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playSequentially(a1, a2);
-        animatorSet.setDuration(ELEMENT_ANIMATION_DURATION_SEL);
+        animatorSet.setDuration(getAnimationDurationBase(ELEMENT_ANIMATION_REL_LENGTH_SEL));
         animatorSet.setInterpolator(linearInterpolator);
         return animatorSet;
     }

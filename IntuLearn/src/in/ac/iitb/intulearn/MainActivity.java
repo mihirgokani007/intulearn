@@ -143,6 +143,11 @@ public class MainActivity extends ListActivity implements SearchView.OnQueryText
                 startActivity(Intent.createChooser(intent, resources.getText(R.string.str_label_share_title)));
                 return true;
 
+            case R.id.menu_settings:
+                intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
+                return true;
+
             case R.id.menu_user_guide:
                 intent = new Intent(MainActivity.this, GenericActivity.class);
                 intent.putExtra(GenericActivity.MODE_KEY, GenericActivity.Mode.URL);

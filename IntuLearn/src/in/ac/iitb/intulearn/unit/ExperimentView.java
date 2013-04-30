@@ -1,5 +1,6 @@
 package in.ac.iitb.intulearn.unit;
 
+import in.ac.iitb.intulearn.SettingsActivity;
 import in.ac.iitb.intulearn.util.Common.DensityManager;
 
 import java.util.ArrayList;
@@ -9,9 +10,11 @@ import android.animation.AnimatorSet;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.drawable.shapes.RectShape;
+import android.preference.PreferenceManager;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.MotionEvent;
@@ -23,6 +26,10 @@ import android.widget.EditText;
  * @created 9-Feb-2013 00:49:38 AM
  */
 public abstract class ExperimentView extends View {
+
+    final static private long ANIMATION_DURATION_FAST = 500;
+    final static private long ANIMATION_DURATION_MEDIUM = 1000;
+    final static private long ANIMATION_DURATION_SLOW = 1500;
 
     final static public float GLOBAL_OFFSET_X = 50f;
     final static public float GLOBAL_OFFSET_Y = 150f;
@@ -140,6 +147,17 @@ public abstract class ExperimentView extends View {
             totalDuration += step.getStartDelay() + step.getDuration();
         }
         return totalDuration;
+    }
+
+    public long getAnimationDurationBase(int relativeLength) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+        // PREF_UI_SPEED_KEY: 500 - Fast, 1000 - Medium, 1500 - Slow
+        String speedKey = preferences.getString(SettingsActivity.PREF_UI_SPEED_KEY, SettingsActivity.PREF_UI_SPEED_VALUE_MEDIUM);
+        long duration;
+        if (SettingsActivity.PREF_UI_SPEED_VALUE_FAST.equals(speedKey)) duration = ANIMATION_DURATION_FAST;
+        else if (SettingsActivity.PREF_UI_SPEED_VALUE_SLOW.equals(speedKey)) duration = ANIMATION_DURATION_SLOW;
+        else duration = ANIMATION_DURATION_MEDIUM;
+        return duration * relativeLength;
     }
 
     abstract protected ArrayList<Animator> newAnimation();

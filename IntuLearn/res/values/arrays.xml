@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="pref_ui_speed_entries">
+        <item>Slow</item>
+        <item>Medium</item>
+        <item>Fast</item>
+    </string-array>
+    <string-array name="pref_ui_speed_entryvalues">
+        <item>slow</item>
+        <item>medium</item>
+        <item>fast</item>
+    </string-array>
+
+</resources>

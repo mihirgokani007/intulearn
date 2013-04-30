@@ -45,9 +45,8 @@ import android.view.animation.LinearInterpolator;
 
 public class LinearSearchExperiment extends ExperimentView {
 
-    final static private long ELEMENT_ANIMATION_DURATION_MOVE = 1000; // Animate
-    final static private long ELEMENT_ANIMATION_DURATION_HALT = 500; // Halt
-    final static private long ELEMENT_ANIMATION_DURATION_MATCH = 2000; // Match
+    final static private int ELEMENT_ANIMATION_REL_LENGTH_MOVE = 1; // Animate
+    final static private int ELEMENT_ANIMATION_REL_LENGTH_MATCH = 2; // Match
 
     private static final int ELEMENT_FILL_COLOR_FOUND = 0xff88ff88;
     private static final int ELEMENT_FILL_COLOR_NOT_FOUND = 0xffff8888;
@@ -123,7 +122,7 @@ public class LinearSearchExperiment extends ExperimentView {
 
         ObjectAnimator anim = ObjectAnimator.ofFloat(searchElement, "x", newX);
         anim.addUpdateListener(viewInvalidator);
-        anim.setDuration(ELEMENT_ANIMATION_DURATION_MOVE);
+        anim.setDuration(getAnimationDurationBase(ELEMENT_ANIMATION_REL_LENGTH_MOVE));
         anim.setInterpolator(linearInterpolator);
         return anim;
     }
@@ -142,7 +141,7 @@ public class LinearSearchExperiment extends ExperimentView {
 
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(a1, a2);
-        animatorSet.setDuration(ELEMENT_ANIMATION_DURATION_MATCH);
+        animatorSet.setDuration(getAnimationDurationBase(ELEMENT_ANIMATION_REL_LENGTH_MATCH));
         animatorSet.setInterpolator(linearInterpolator);
         return animatorSet;
     }
@@ -162,7 +161,7 @@ public class LinearSearchExperiment extends ExperimentView {
 
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.play(a1).with(a2).before(a3);
-        animatorSet.setDuration(ELEMENT_ANIMATION_DURATION_MATCH);
+        animatorSet.setDuration(getAnimationDurationBase(ELEMENT_ANIMATION_REL_LENGTH_MATCH));
         animatorSet.setInterpolator(linearInterpolator);
         return animatorSet;
     }
