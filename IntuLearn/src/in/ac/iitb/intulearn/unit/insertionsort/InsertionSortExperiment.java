@@ -50,7 +50,7 @@ public class InsertionSortExperiment extends ExperimentView {
             inputElements.add(inputElement);
         }
 
-        inputElements = inputElementsCopy;
+        inputElementsCopy = inputElements; // No need to clone
         initExperiment();
     }
 

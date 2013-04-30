@@ -46,7 +46,7 @@ public class BubbleSortExperiment extends ExperimentView {
             inputElements.add(inputElement);
         }
 
-        inputElements = inputElementsCopy;
+        inputElementsCopy = inputElements; // No need to clone
         initExperiment();
     }
 
